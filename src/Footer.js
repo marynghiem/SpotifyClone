@@ -13,7 +13,11 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer_left">
-        <p>Album and song details</p>
+        <img className="footer_album_logo" src="" alt="" />
+        <div className="footer_song_info">
+          <h4></h4>
+          <p></p>
+        </div>
       </div>
       <div className="footer_center">
         <ShuffleIcon className="footer_green" />
