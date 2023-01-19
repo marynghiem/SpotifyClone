@@ -52,3 +52,9 @@
 .footer_song_info > p {
   font-size: 12px;
 }
+
+.footer_icon:hover,
+.footer_green:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2) !important;
+}
