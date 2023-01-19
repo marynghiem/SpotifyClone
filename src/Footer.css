@@ -41,3 +41,14 @@
   margin-right: 20px;
   object-fit: contain;
 }
+
+.footer_green {
+  color: #1ed15e;
+}
+
+.footer_song_info > h4 {
+  margin-bottom: 5px;
+}
+.footer_song_info > p {
+  font-size: 12px;
+}
