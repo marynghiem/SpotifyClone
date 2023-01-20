@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { Avatar } from "@mui/material";
 
 const Header = ({ spotify }) => {
+  const [{ user }, dispatch] = useState();
+
   return (
     <div className="header">
       <div className="header_left">
