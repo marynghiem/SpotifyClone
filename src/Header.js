@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { Avatar } from "@mui/material";
+import { useDataLayerValue } from "./DataLayer";
+import { display } from "@mui/system";
 
 const Header = ({ spotify }) => {
-  const [{ user }, dispatch] = useState();
+  const [{ user }, dispatch] = useDataLayerValue();
 
   return (
     <div className="header">
@@ -13,8 +15,8 @@ const Header = ({ spotify }) => {
         <input placeholder="Search for Artists, Songs, or Podcasts " type="text" />
       </div>
       <div className="header_right">
-        <Avatar src="" alt="MN" />
-        <h4>Mary Nghiem</h4>
+        <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
+        <h4>{user?.display_name}</h4>
       </div>
     </div>
   );
