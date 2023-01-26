@@ -1,8 +1,11 @@
 export const initialState = {
   user: null,
   playlists: [],
+  spotify: null,
   playing: false,
+  discover_weekly: null,
   item: null,
+  top_artist: null,
   token: null,
 };
 
@@ -17,6 +20,27 @@ const reducer = (state, action) => {
         ...state,
         user: action.user,
       };
+    case "SET_PLAYING":
+      return {
+        ...state,
+        playing: action.playing,
+      };
+    case "SET_ITEM":
+      return {
+        ...state,
+        item: action.item,
+      };
+    case "SET_TOP_ARTISTS":
+      return {
+        ...state,
+        top_artists: action.top_artists,
+      };
+    case "SET_SPOTIFY":
+      return {
+        ...state,
+        spotify: action.spotify,
+      };
+
     case "SET_TOKEN":
       return {
         ...state,
